@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Media query : on corrige width:1OO% → width:100% */
+    @media screen and (max-width: 768px) {
+      .responsive-table { display: block; width: 100%; }
+      .responsive-row { display: flex; flex-direction: column; }
+      .responsive-cell {
+        width: 100% !important;
+        display: block;
+        text-align: center !important;
+        padding: 20px !important;
+        box-sizing: border-box;
+      }
+      .responsive-logo img { max-width: 80px; height: auto; }
+    }
+    /* Fond gris global */
+    .fond-gris { background-color: #f1f1f1; }
+  </style>
+</head>
+<body>
+  <table class="responsive-table fond-gris" style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.5; width:100%;" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr class="responsive-row">
+        <!-- Colonne gauche -->
+        <td class="responsive-cell" style="padding: 10px 0px; vertical-align: top; width:35%;">
+          <strong style="font-size: 16px; color: #000;">Nesrine BENLARBI</strong><br/>
+          <span style="font-size: 14px; color: #333;">Stagiaire</span><br/><br/>
+          <a style="text-decoration: none; color: #007bff;" href="tel:0786524195">06 50 46 10 91</a><br/>
+          <a style="text-decoration: none; color: #007bff;" href="mailto:contact@web-boost.fr">n.benlarbi3@gmail.com</a><br/><br/>
+          <span style="color: #333;">Lyon 3</span>
+        </td>
+
+        <!-- Colonne centre (logo) -->
+        <td class="responsive-cell responsive-logo" style="text-align: center; border-radius: 0px 10px 10px 0px; padding: 10px; width:30%;">
+          <img style="max-height: 100px; height: auto;" src="telechargement.png" alt="Logo"/>
+        </td>
+
+        <!-- Colonne droite (photo) -->
+        <td class="responsive-cell" style="
+          background: url('https://www.ladressedevotreimage.png') no-repeat center bottom;
+          background-size: contain;
+          border-radius: 0px 0px 20px;
+          padding: 30px;
+          width:30%;">
+          <!-- contenu vide juste pour afficher l’image en fond -->
+          &nbsp;
+        </td>
+      </tr>
+
+      <!-- Footer avec liens -->
+      <tr>
+        <td class="fond-gris" style="text-align: center; padding: 10px;" colspan="3">
+          <a style="text-decoration: none; color: #007bff; margin-right: 10px;" href="https://www.profildevotrechoix1.com" target="_blank">Profil 1</a> |
+          <a style="text-decoration: none; color: #007bff; margin-right: 10px;" href="https://www.profildevotrechoix2.com" target="_blank">Profil 2</a> | 
+          <a style="text-decoration: none; color: #007bff; margin-right: 10px;" href="https://www.profildevotrechoix3.com" target="_blank">Profil 3</a> | 
+          <a style="text-decoration: none; color: #007bff; margin-right: 10px;" href="https://www.facebook.com/profile..php" target="_blank">Facebook</a> | 
+          <a style="text-decoration: none; color: #007bff;" href="https://www.ladressedevotreportefolio.com" target="_blank">Portefolio</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
